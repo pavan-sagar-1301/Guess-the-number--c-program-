@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+// Guess the Number choosen by the device.
+int main(){
+    printf("*Guess The Number*\n");
+    printf("Guess the number between 1 to 10.\n");
+    int randomnumber,userInput;
+    randomnumber = rand() % 10;
+    scanf("%d",&userInput);
+    while (userInput != randomnumber)
+    {
+        if(userInput > randomnumber){
+            printf("Sorry! Your input is HIGH. Guess somewhat LOW\n");
+          scanf("%d",&userInput);
+          
+        }else if(userInput < randomnumber){
+            printf("Sorry! Your input is LOW. Guess somewhat HIGH\n");
+          scanf("%d",&userInput);
+        }
+    }
+
+    printf("Hurray! You guessed right - %d",randomnumber);
+
+    return 0;
+    
+    
+    
+}
